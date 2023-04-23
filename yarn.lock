@@ -2215,31 +2215,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"blog@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "blog@workspace:."
-  dependencies:
-    "@ikota/vanilla-extract": ^1.0.2
-    "@types/node": ^18.15.13
-    "@types/react": ^18.0.38
-    "@types/react-dom": ^18.0.11
-    "@vanilla-extract/css": ^1.11.0
-    "@vanilla-extract/next-plugin": ^2.1.2
-    eslint: ^8.39.0
-    eslint-config-next: ^13.3.1
-    firebase: ^9.20.0
-    ikota: ^1.0.1
-    next: 13.3.1
-    prettier: ^2.8.8
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    remark: ^14.0.2
-    remark-html: ^15.0.2
-    sharp: ^0.32.0
-    typescript: ^5.0.4
-  languageName: unknown
-  linkType: soft
-
 "brace-expansion@npm:^1.1.7":
   version: 1.1.11
   resolution: "brace-expansion@npm:1.1.11"
@@ -5464,6 +5439,31 @@ __metadata:
   checksum: ff48d251fc3f827e5b1206cda0ffdaec885e56057ee86a3155e1951bc940fd5f33531774b1cc8414d7668c10a8907f863f6561875ee6e8768931a62121a531a1
   languageName: node
   linkType: hard
+
+"my-small-writing-blog@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "my-small-writing-blog@workspace:."
+  dependencies:
+    "@ikota/vanilla-extract": ^1.0.2
+    "@types/node": ^18.15.13
+    "@types/react": ^18.0.38
+    "@types/react-dom": ^18.0.11
+    "@vanilla-extract/css": ^1.11.0
+    "@vanilla-extract/next-plugin": ^2.1.2
+    eslint: ^8.39.0
+    eslint-config-next: ^13.3.1
+    firebase: ^9.20.0
+    ikota: ^1.0.1
+    next: 13.3.1
+    prettier: ^2.8.8
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    remark: ^14.0.2
+    remark-html: ^15.0.2
+    sharp: ^0.32.0
+    typescript: ^5.0.4
+  languageName: unknown
+  linkType: soft
 
 "nanoid@npm:^3.3.4, nanoid@npm:^3.3.6":
   version: 3.3.6
