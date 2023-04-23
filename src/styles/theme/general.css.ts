@@ -1,0 +1,81 @@
+import { rem } from "@util/units/rem";
+import { createGlobalTheme, globalStyle } from "@vanilla-extract/css";
+
+export const theme = createGlobalTheme(":root", {
+  space: {
+    none: "0",
+    xss: rem(1),
+    xs: rem(2),
+    sm: rem(4),
+    md: rem(8),
+    lg: rem(16),
+    xl: rem(24),
+    xxl: rem(36),
+  },
+  fontSize: {
+    xs: rem(14),
+    sm: rem(14.4),
+    md: rem(18),
+    lg: rem(20),
+    xl: rem(22),
+    xxl: rem(23),
+  },
+  fontWeight: {
+    sm: "350",
+    md: "440",
+    lg: "700",
+  },
+  fontFamily: {
+    content: "var(--font-literata)",
+    code: "var(--font-fira-code)",
+  },
+  borderRadius: {
+    none: "0",
+    xs: rem(1),
+    sm: rem(2),
+    md: rem(4),
+    lg: rem(8),
+    xl: rem(12),
+    circle: "50%",
+  },
+  color: {
+    bg: "#fff",
+    bgAlt: "#f4f4f4",
+    text: "#3b3d40",
+    textLight: "#676767",
+    line: "#888",
+    lineLight: "#ddd",
+    selection: "#ffff8d",
+  },
+});
+
+globalStyle("*", {
+  boxSizing: "border-box",
+  margin: 0,
+  padding: 0,
+  outline: "none",
+});
+
+globalStyle("::selection", {
+  backgroundColor: theme.color.selection,
+});
+
+// Typography
+
+globalStyle("a", {
+  color: theme.color.text,
+
+  textDecorationColor: theme.color.lineLight,
+  textUnderlineOffset: rem(3),
+  textDecorationThickness: rem(1),
+
+  transition: "opacity .3s",
+});
+
+globalStyle("a:hover", {
+  opacity: 0.75,
+});
+
+globalStyle("p", {
+  marginBottom: rem(24),
+});

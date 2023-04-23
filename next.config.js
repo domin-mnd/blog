@@ -1,0 +1,19 @@
+const { createVanillaExtractPlugin } = require("@vanilla-extract/next-plugin");
+const withVanillaExtract = createVanillaExtractPlugin();
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  redirects: async () => [
+    {
+      source: "/me",
+      destination: "https://domin.pro/",
+      basePath: false,
+      permanent: true,
+    },
+  ],
+  // experimental: {
+  //   appDir: true,
+  // },
+};
+
+module.exports = withVanillaExtract(nextConfig);

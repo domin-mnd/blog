@@ -1,0 +1,37 @@
+{
+  "name": "my-small-writing-blog",
+  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
+    "prettier:write": "prettier --write \"**/*.{ts,tsx}\""
+  },
+  "packageManager": "yarn@3.5.0",
+  "dependencies": {
+    "firebase": "^9.20.0",
+    "next": "13.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.2",
+    "sharp": "^0.32.0"
+  },
+  "devDependencies": {
+    "@ikota/vanilla-extract": "^1.0.2",
+    "@types/node": "^18.15.13",
+    "@types/react": "^18.0.38",
+    "@types/react-dom": "^18.0.11",
+    "@vanilla-extract/css": "^1.11.0",
+    "@vanilla-extract/next-plugin": "^2.1.2",
+    "eslint": "^8.39.0",
+    "eslint-config-next": "^13.3.1",
+    "ikota": "^1.0.1",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  }
+}
