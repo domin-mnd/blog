@@ -2,7 +2,7 @@ import "@theme/general";
 import { Layout } from "@component/provider/layout";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { title } from "@config/site";
+import { ogDescription, ogTitle, title } from "@config/site";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -33,6 +33,9 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#ffffff" />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={ogDescription} />
         <title>{title}</title>
       </Head>
       <Layout>

@@ -6,11 +6,17 @@ import { content, dateSpan, header, title } from "@style/pages/post";
 import { unstyledAnchor, unstyledHeader } from "@style/global/unstyled";
 import { reserialize } from "@util/api/reserialize";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Post({ post }: PostParams) {
   const date = new Date(post.createdAt);
   return (
     <>
+      <Head>
+        <meta property="og:title" content={post.title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={`${post.content.substring(183)}...`} />
+      </Head>
       <header className={header}>
         <Link href="/" className={unstyledAnchor}>
           <h3 className={`${title} ${unstyledHeader}`}>{post.title}</h3>
