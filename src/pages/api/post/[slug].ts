@@ -7,7 +7,7 @@ export default async function handler(
   res: NextApiResponse<PostResponse | NotFoundResponse>
 ) {
   const { slug } = req.query;
-  const post = await getPostBySlug(slug as string)
+  const post = await getPostBySlug(slug as string);
   
   res.status(post.statusCode).json(post);
 }

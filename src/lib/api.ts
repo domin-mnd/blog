@@ -11,6 +11,7 @@ import {
   query,
 } from "firebase/firestore";
 import { db } from "./firebase";
+import { normalize } from "@util/api/normalize";
 
 /** Get post data by its slug (Document ID) */
 export async function getPostBySlug(
@@ -34,7 +35,7 @@ export async function getPostBySlug(
 
   return {
     title: postData.title,
-    content: postData.content,
+    content: normalize(postData.content),
     createdAt: new Date(postData.createdAt.seconds * 1000),
     statusCode: 200,
   } as PostResponse;
