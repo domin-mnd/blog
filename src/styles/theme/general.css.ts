@@ -15,10 +15,10 @@ export const theme = createGlobalTheme(":root", {
   fontSize: {
     xs: rem(14),
     sm: rem(14.4),
-    md: rem(18),
-    lg: rem(20),
-    xl: rem(22),
-    xxl: rem(23),
+    md: rem(15),
+    lg: rem(16),
+    xl: rem(18),
+    xxl: rem(20),
   },
   fontWeight: {
     sm: "350",
@@ -78,4 +78,18 @@ globalStyle("a:hover", {
 
 globalStyle("p", {
   marginBottom: rem(24),
+  fontSize: theme.fontSize.md,
+});
+
+globalStyle("hr", {
+  // Equivalent to appearance: none;
+  color: "transparent",
+  border: "none",
+
+  width: rem(128),
+  height: rem(1),
+  backgroundColor: theme.color.lineLight,
+
+  marginTop: rem(32),
+  marginBottom: rem(32),
 });
