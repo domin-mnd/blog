@@ -3,14 +3,21 @@ import { bio, fullName } from "@config/personal";
 import { getAllPosts } from "@lib/api";
 import { Hero } from "@component/pages/hero";
 import { Humanity } from "@component/ui/humanity";
+import Head from "next/head";
 import { Post } from "@component/pages/post";
 import { banner, header, blog, title, posts } from "@style/pages/index";
 import { unstyledHeader } from "@style/global/unstyled";
 import { reserialize } from "@util/api/reserialize";
+import { ogDescription, ogTitle } from "@public/config/site";
 
 export default function Index({ postsData }: IndexParams) {
   return (
     <>
+      <Head>
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={ogDescription} />
+      </Head>
       <Hero>
         <div className={banner}>
           <Humanity src={5} />

@@ -1,12 +1,12 @@
 import type { GetServerSideProps, GetStaticPaths } from "next";
-import { getAllPosts, getPostBySlug } from "@lib/api";
+import Link from "next/link";
+import Head from "next/head";
+import { getPostBySlug } from "@lib/api";
 import markdownToHtml from "@lib/remark";
 import { monthNames } from "@component/pages/post";
 import { content, dateSpan, header, title } from "@style/pages/post";
 import { unstyledAnchor, unstyledHeader } from "@style/global/unstyled";
 import { reserialize } from "@util/api/reserialize";
-import Link from "next/link";
-import Head from "next/head";
 
 export default function Post({ post }: PostParams) {
   const date = new Date(post.createdAt);
@@ -15,7 +15,7 @@ export default function Post({ post }: PostParams) {
       <Head>
         <meta property="og:title" content={post.title} />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content={`${post.content.substring(183)}...`} />
+        <meta property="og:description" content={`${post.rawContent.substring(0, 183)}...`} />
       </Head>
       <header className={header}>
         <Link href="/" className={unstyledAnchor}>
@@ -45,6 +45,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     props: {
       post: {
         ...serializing,
+        rawContent: serializing.content,
         content,
       },
     },
