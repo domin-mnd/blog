@@ -3,7 +3,7 @@ import { getAllPosts, getPostBySlug } from "@lib/api";
 import markdownToHtml from "@lib/remark";
 import { monthNames } from "@component/pages/post";
 import { content, dateSpan, header, title } from "@style/pages/post";
-import { unstyledAnchor } from "@style/global/unstyled";
+import { unstyledAnchor, unstyledHeader } from "@style/global/unstyled";
 import { reserialize } from "@util/api/reserialize";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ export default function Post({ post }: PostParams) {
     <>
       <header className={header}>
         <Link href="/" className={unstyledAnchor}>
-          <h3 className={title}>{post.title}</h3>
+          <h3 className={`${title} ${unstyledHeader}`}>{post.title}</h3>
         </Link>
         <span className={dateSpan}>
           {monthNames[date.getMonth()]} {date.getDate()}, {date.getFullYear()}

@@ -5,6 +5,7 @@ import { Hero } from "@component/pages/hero";
 import { Humanity } from "@component/ui/humanity";
 import { Post } from "@component/pages/post";
 import { banner, header, blog, title, posts } from "@style/pages/index";
+import { unstyledHeader } from "@style/global/unstyled";
 import { reserialize } from "@util/api/reserialize";
 
 export default function Index({ postsData }: IndexParams) {
@@ -16,11 +17,11 @@ export default function Index({ postsData }: IndexParams) {
         </div>
         <div>
           <header className={header}>
-            <h2>{fullName}</h2>
+            <h2 className={unstyledHeader}>{fullName}</h2>
           </header>
           {bio}
           <section className={blog}>
-            <h4 className={title}>Writing</h4>
+            <h4 className={`${title} ${unstyledHeader}`}>Writing</h4>
             <div className={posts}>
               {postsData.map((post) => (
                 <Post

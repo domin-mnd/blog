@@ -93,3 +93,8 @@ globalStyle("hr", {
   marginTop: rem(32),
   marginBottom: rem(32),
 });
+
+globalStyle("h1, h2, h3, h4, h5, h6", {
+  paddingTop: rem(24),
+  paddingBottom: rem(24),
+});
