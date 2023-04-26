@@ -15,7 +15,10 @@ export default function Post({ post }: PostParams) {
       <Head>
         <meta property="og:title" content={post.title} />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content={`${post.rawContent.substring(0, 183)}...`} />
+        <meta
+          property="og:description"
+          content={`${post.rawContent.substring(0, 183)}...`}
+        />
       </Head>
       <header className={header}>
         <Link href="/" className={unstyledAnchor}>
@@ -45,7 +48,8 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     props: {
       post: {
         ...serializing,
-        rawContent: serializing.content,
+        rawContent:
+          serializing.statusCode === 200 ? serializing.content : "404",
         content,
       },
     },
