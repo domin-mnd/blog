@@ -39,7 +39,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     post?.statusCode === 200 ? post.content : "404"
   );
 
-  const serializing: PostResponse = reserialize(post);
+  const serializing: PostResponse | NotFoundResponse = reserialize(post);
 
   return {
     props: {
