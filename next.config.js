@@ -3,6 +3,12 @@ const withVanillaExtract = createVanillaExtractPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  rewrites: async () => [
+    {
+      source: '/cdn/:path*',
+      destination: '/api/cdn/:path*',
+    },
+  ],
   redirects: async () => [
     {
       source: "/me",

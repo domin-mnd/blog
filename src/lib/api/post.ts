@@ -10,7 +10,7 @@ import {
   orderBy,
   query,
 } from "firebase/firestore";
-import { db } from "./firebase";
+import { db } from "../firebase";
 import { normalize } from "@util/api/normalize";
 
 /** Get post data by its slug (Document ID) */

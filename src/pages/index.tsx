@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from "next";
 import { bio, fullName } from "@config/personal";
-import { getAllPosts } from "@lib/api";
+import { getAllPosts } from "@lib/api/post";
 import { Hero } from "@component/pages/hero";
 import { Humanity } from "@component/ui/humanity";
 import Head from "next/head";

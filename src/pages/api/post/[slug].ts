@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getPostBySlug } from "@lib/api";
+import { getPostBySlug } from "@lib/api/post";
 
-/** Get post data by its slug (Document ID). Accessible from getPostBySlug of @lib/api */
+/** Get post data by its slug (Document ID). Accessible from getPostBySlug of @lib/api/post */
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<PostResponse | NotFoundResponse>

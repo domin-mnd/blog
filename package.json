@@ -13,12 +13,15 @@
   },
   "packageManager": "yarn@3.5.0",
   "dependencies": {
+    "@pondorasti/remark-img-links": "^1.0.8",
     "firebase": "^9.20.0",
     "next": "13.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remark": "^14.0.2",
+    "remark-gfm": "^3.0.1",
     "remark-html": "^15.0.2",
+    "request": "^2.88.2",
     "sharp": "^0.32.0"
   },
   "devDependencies": {
@@ -26,6 +29,7 @@
     "@types/node": "^18.15.13",
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
+    "@types/request": "^2.48.8",
     "@vanilla-extract/css": "^1.11.0",
     "@vanilla-extract/next-plugin": "^2.1.2",
     "eslint": "^8.39.0",

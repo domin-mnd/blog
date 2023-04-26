@@ -1,7 +1,7 @@
 import type { GetServerSideProps, GetStaticPaths } from "next";
 import Link from "next/link";
 import Head from "next/head";
-import { getPostBySlug } from "@lib/api";
+import { getPostBySlug } from "@lib/api/post";
 import markdownToHtml from "@lib/remark";
 import { monthNames } from "@component/pages/post";
 import { content, dateSpan, header, title } from "@style/pages/post";
