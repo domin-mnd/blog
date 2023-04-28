@@ -98,3 +98,12 @@ globalStyle("h1, h2, h3, h4, h5, h6", {
   paddingTop: rem(24),
   paddingBottom: rem(24),
 });
+
+globalStyle("ul", {
+  marginBottom: rem(24),
+  listStylePosition: "inside",
+});
+
+globalStyle("li:not(:last-child)", {
+  marginBottom: rem(10),
+});
