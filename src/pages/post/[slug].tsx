@@ -38,18 +38,24 @@ export default function Post({ post }: PostParams) {
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const post = await getPostBySlug((params?.slug as string) ?? "");
-  const content = await markdownToHtml(
-    post?.statusCode === 200 ? post.content : "404"
-  );
 
-  const serializing: PostResponse | NotFoundResponse = reserialize(post);
+  // Return 404 if 404, mhm
+  if (post?.statusCode === 404) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const content = await markdownToHtml(post.content);
+
+  // Parse date objects etc etc to JSON.
+  const serializing: PostResponse = reserialize(post);
 
   return {
     props: {
       post: {
         ...serializing,
-        rawContent:
-          serializing.statusCode === 200 ? serializing.content : "404",
+        rawContent: serializing.content,
         content,
       },
     },

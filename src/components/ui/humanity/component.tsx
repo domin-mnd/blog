@@ -1,5 +1,6 @@
 import type { FunctionComponent, ReactElement } from "react";
 import Image from "next/image";
+import { rgbDataURL } from "@util/color/dataUrl";
 
 /**
  * Humanity illustration wrapper
@@ -15,6 +16,8 @@ export const Humanity: FunctionComponent<HumanityProps> = ({
     // Humanities are now only accessible from CDN middleware
     src={`/cdn/humanities/${src}.png`}
     alt={`${src} - Humanity`}
+    placeholder="blur"
+    blurDataURL={rgbDataURL(250, 250, 250)}
     width={size}
     height={size}
   />

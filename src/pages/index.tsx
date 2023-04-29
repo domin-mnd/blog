@@ -8,7 +8,7 @@ import { Post } from "@component/pages/post";
 import { banner, header, blog, title, posts } from "@style/pages/index";
 import { unstyledHeader } from "@style/global/unstyled";
 import { reserialize } from "@util/api/reserialize";
-import { ogDescription, ogTitle } from "@public/config/site";
+import { ogDescription, ogTitle } from "@config/site";
 
 export default function Index({ postsData }: IndexParams) {
   return (

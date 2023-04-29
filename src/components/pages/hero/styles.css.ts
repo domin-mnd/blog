@@ -6,4 +6,10 @@ export const hero: string = style({
   display: "flex",
   gap: rem(16),
   marginTop: rem(64),
+
+  "@media": {
+    "screen and (max-width: 900px)": {
+      flexDirection: "column",
+    },
+  },
 });
