@@ -12,7 +12,8 @@ export const Humanity: FunctionComponent<HumanityProps> = ({
   size = 256,
 }): ReactElement => (
   <Image
-    src={`/humanities/${src}.png`}
+    // Humanities are now only accessible from CDN middleware
+    src={`/cdn/humanities/${src}.png`}
     alt={`${src} - Humanity`}
     width={size}
     height={size}

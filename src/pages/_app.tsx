@@ -2,7 +2,7 @@ import "@theme/general";
 import { Layout } from "@component/provider/layout";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { ogDescription, ogTitle, title } from "@config/site";
+import { title } from "@config/site";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

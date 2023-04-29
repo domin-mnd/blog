@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Domin-MND",
   "private": true,
+  "packageManager": "yarn@3.5.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,7 +13,9 @@
     "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\""
   },
-  "packageManager": "yarn@3.5.0",
+  "engines": {
+    "node": ">=17.0.0"
+  },
   "dependencies": {
     "@pondorasti/remark-img-links": "^1.0.8",
     "firebase": "^9.20.0",
@@ -22,7 +25,6 @@
     "remark": "^14.0.2",
     "remark-gfm": "^3.0.1",
     "remark-html": "^15.0.2",
-    "request": "^2.88.2",
     "sharp": "^0.32.0"
   },
   "devDependencies": {
@@ -30,7 +32,6 @@
     "@types/node": "^18.15.13",
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
-    "@types/request": "^2.48.8",
     "@vanilla-extract/css": "^1.11.0",
     "@vanilla-extract/next-plugin": "^2.1.2",
     "eslint": "^8.39.0",
