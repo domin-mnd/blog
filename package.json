@@ -2,6 +2,7 @@
   "name": "my-small-writing-blog",
   "license": "MIT",
   "version": "0.1.0",
+  "author": "Domin-MND",
   "private": true,
   "scripts": {
     "dev": "next dev",
