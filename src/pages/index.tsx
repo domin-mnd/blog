@@ -1,4 +1,4 @@
-import type { GetServerSideProps } from "next";
+import type { GetStaticProps } from "next";
 import { bio, fullName } from "@config/personal";
 import { getAllPosts } from "@lib/api/post";
 import { Hero } from "@component/pages/hero";
@@ -46,7 +46,7 @@ export default function Index({ postsData }: IndexParams) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const postsData = await getAllPosts();
   const serializing = reserialize(postsData);
 
@@ -54,5 +54,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: {
       postsData: serializing,
     },
+    revalidate: 2_592_000,
   };
 };

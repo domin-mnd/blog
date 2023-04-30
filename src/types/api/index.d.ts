@@ -15,3 +15,11 @@ interface InternalServerResponse {
   /** The human-readable message of the response */
   message: "Internal Server Error";
 }
+
+/** 401 page response */
+interface UnauthorizedResponse {
+  /** Discriminated union type value along with the status code usage */
+  statusCode: 401;
+  /** The human-readable message of the response */
+  message: "Unauthorized";
+}
