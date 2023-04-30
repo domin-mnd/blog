@@ -70,10 +70,22 @@ globalStyle("a", {
   textDecorationThickness: rem(1),
 
   transition: "opacity .3s",
+
+  "@media": {
+    "(prefers-reduced-motion)": {
+      transitionProperty: "none",
+    },
+  },
 });
 
 globalStyle("a:hover", {
   opacity: 0.75,
+
+  "@media": {
+    "(prefers-reduced-motion)": {
+      transitionProperty: "none",
+    },
+  },
 });
 
 globalStyle("p", {

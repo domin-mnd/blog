@@ -14,4 +14,14 @@ export const title: string = style({
 
     transition: "opacity .3s",
   },
+
+  "@media": {
+    "(prefers-reduced-motion)": {
+      transitionProperty: "none",
+
+      ":hover": {
+        transitionProperty: "none",
+      },
+    },
+  },
 });

@@ -42,5 +42,12 @@ export const button: string = style({
         backgroundColor: "transparent",
       },
     },
+    "(prefers-reduced-motion)": {
+      transitionProperty: "none",
+
+      ":hover": {
+        transitionProperty: "none",
+      },
+    },
   },
 });
