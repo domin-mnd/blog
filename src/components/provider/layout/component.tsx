@@ -14,6 +14,11 @@ const literata = Literata({
   variable: "--font-literata",
 });
 
+/**
+ * Initial layout of SPA
+ * @param {React.ReactNode} param.children Pages provided in the layout
+ * @returns {ReactElement} A styled layout with a container for content
+ */
 export const Layout: FunctionComponent<PropsWithChildren> = ({
   children,
 }): ReactElement => (

@@ -36,20 +36,28 @@ export async function getAllPaths(): Promise<string[]> {
   return listAllPaths(listRef);
 }
 
-/** Get download Url of an image */
+/**
+ * Get download URL of an image
+ * @see {@link https://firebase.google.com/docs/storage/web/download-files#download_data_via_url Download Data via URL}
+ */
 export async function getAsset(filePath: string): Promise<string | 404> {
   const storage = getStorage(app);
   const fileRef = ref(storage, filePath);
 
+  // Return 404 on catch error (usually not found)
   return getDownloadURL(fileRef).catch(() => 404);
 }
 
-/** Get metadata of an image (unused) */
+/**
+ * Get metadata of an image (unused)
+ * @see {@link https://firebase.google.com/docs/storage/web/file-metadata File metadata}
+ */
 export async function getMetadata(
   filePath: string
 ): Promise<FullMetadata | 404> {
   const storage = getStorage(app);
   const fileRef = ref(storage, filePath);
 
+  // Return 404 on catch error (usually not found)
   return getFirebaseMetaData(fileRef).catch(() => 404);
 }

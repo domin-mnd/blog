@@ -4,10 +4,12 @@ import { rgbDataURL } from "@util/color/dataUrl";
 import { image } from "./styles.css";
 
 /**
- * Humanity illustration wrapper
- * @param param.src A number source of the humanity illustration as stated in /public/humanities
- * @param param.size A square size of the illustration
- * @returns an image
+ * Humanity illustration wrapper to render an optimized image of next.js
+ * @todo Add setup documentation
+ * @see {@link https://nextjs.org/docs/basic-features/image-optimization Image optimization}
+ * @param {number} props.src A number source of the humanity illustration as stated in /public/humanities
+ * @param {number} props.size A square size of the illustration
+ * @returns {ReactElement} Next.js image with placeholder & preset alt
  */
 export const Humanity: FunctionComponent<HumanityProps> = ({
   src,
