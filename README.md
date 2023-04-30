@@ -13,7 +13,7 @@ This work is a representation of what I could do with [`vanilla-extract`](https:
 To run this project locally, you need to have [Node.js](https://nodejs.org/en/) installed on your machine:
 
 ```bash
-git clone https://github.com/Domin-MND/blog . # clone the repository into the current directory
+git clone https://github.com/domin-mnd/blog . # clone the repository into the current directory
 npm install # for the dependencies installation
 npm run build # for the production build
 npm start # start the server
