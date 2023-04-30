@@ -1,3 +1,4 @@
+import { getAllPosts } from "@lib/api/post";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 /**
@@ -17,8 +18,19 @@ export default async function handler(
   }
 
   try {
-    // What path to revalidate
-    await res.revalidate(req.query.path as string);
+    if (req.query.path) {
+      // What single path to revalidate
+      await res.revalidate(req.query.path as string);
+    } else {
+      // Revalidate all paths
+      const posts = await getAllPosts();
+      const paths = posts.map((post) => `/post/${post.slug}`);
+
+      for (const path of paths) {
+        await res.revalidate(path);
+      }
+    }
+    
     return res.status(200).json({
       statusCode: 200,
       message: "Revalidated",
