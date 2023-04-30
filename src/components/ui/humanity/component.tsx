@@ -1,6 +1,7 @@
 import type { FunctionComponent, ReactElement } from "react";
 import Image from "next/image";
 import { rgbDataURL } from "@util/color/dataUrl";
+import { image } from "./styles.css";
 
 /**
  * Humanity illustration wrapper
@@ -18,6 +19,7 @@ export const Humanity: FunctionComponent<HumanityProps> = ({
     alt={`${src} - Humanity`}
     placeholder="blur"
     blurDataURL={rgbDataURL(250, 250, 250)}
+    className={image}
     width={size}
     height={size}
   />
