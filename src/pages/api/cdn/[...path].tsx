@@ -20,7 +20,7 @@ export default async function handler(
 
   // A middleware API call takes too much, it is important to add caching
   // because of markdown syntax not parsing image to <Image />
-  res.setHeader("Cache-Control", "max-age=2592000");
+  res.setHeader("Cache-Control", "public, max-age=63072000, s-maxage=63072000, stale-while-revalidate=120");
 
   /**
    * Small fix to "API resolved without sending a response for /cdn/..., this may result in stalled requests."
