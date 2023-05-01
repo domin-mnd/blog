@@ -4,7 +4,7 @@ import { createGlobalTheme, globalStyle } from "@vanilla-extract/css";
 export const theme = createGlobalTheme(":root", {
   space: {
     none: "0",
-    xss: rem(1),
+    xxs: rem(1),
     xs: rem(2),
     sm: rem(4),
     md: rem(8),
@@ -40,7 +40,7 @@ export const theme = createGlobalTheme(":root", {
   },
   color: {
     bg: "#fff",
-    bgAlt: "#f4f4f4",
+    bgAlt: "#f8f8f8",
     text: "#3b3d40",
     textLight: "#676767",
     line: "#888",
@@ -119,4 +119,53 @@ globalStyle("ul", {
 
 globalStyle("li:not(:last-child)", {
   marginBottom: rem(10),
+});
+
+globalStyle("img", {
+  width: "100%",
+});
+
+globalStyle("code, pre", {
+  fontFamily: theme.fontFamily.code,
+  fontSize: theme.fontSize.xs,
+});
+
+globalStyle("code", {
+  backgroundColor: theme.color.bgAlt,
+  paddingLeft: theme.space.sm,
+  paddingRight: theme.space.sm,
+  borderRadius: theme.borderRadius.sm,
+});
+
+globalStyle("a code", {
+  textDecoration: "underline",
+  textDecorationColor: theme.color.bgAlt,
+  textDecorationThickness: rem(2),
+});
+
+globalStyle("pre code", {
+  padding: 0,
+});
+
+globalStyle("pre", {
+  backgroundColor: theme.color.bgAlt,
+  borderRadius: theme.borderRadius.sm,
+  padding: theme.space.md,
+  marginBottom: rem(24),
+
+  overflowY: "hidden",
+  scrollbarWidth: "thin",
+  scrollbarColor: `${theme.color.lineLight} ${theme.color.bgAlt}`,
+});
+
+globalStyle("pre::-webkit-scrollbar", {
+  height: rem(8),
+});
+
+globalStyle("pre::-webkit-scrollbar-track", {
+  backgroundColor: theme.color.bgAlt,
+});
+
+globalStyle("pre::-webkit-scrollbar-thumb", {
+  backgroundColor: theme.color.lineLight,
 });

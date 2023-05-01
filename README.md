@@ -49,7 +49,7 @@ Highly inspired by [Katerina Limpitsouni website](https://ninalimpi.com). Illust
 
 ## Documentation
 
-All the available documentation regarding the creation & maintainability of the project is stated in JSDocs.
+All the available documentation regarding the creation & maintainability of the project is stated in JSDocs and [this post](https://blog.domin.pro/post/my-blog-and-its-documentation).
 
 ## Contributing
 

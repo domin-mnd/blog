@@ -1,6 +1,9 @@
-import { remark } from "remark";
+import { unified } from "unified";
 import remarkGfm from "remark-gfm";
-import remarkHtml from "remark-html";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import rehypeHighlight from "rehype-highlight";
 
 /**
  * Function that parses Markdown to HTML
@@ -10,10 +13,13 @@ import remarkHtml from "remark-html";
  * @returns {Promise<string>} HTML string
  */
 export default async function markdownToHtml(markdown: string): Promise<string> {
-  const result = await remark()
-    .use(require("@pondorasti/remark-img-links"), { absolutePath: "/cdn" }) // No types
+  const result = await unified()
+    .use(remarkParse)
+    .use(require("@pondorasti/remark-img-links"), { absolutePath: "https://blog.domin.pro/cdn" }) // No types
     .use(remarkGfm)
-    .use(remarkHtml)
+    .use(remarkRehype)
+    .use(rehypeHighlight)
+    .use(rehypeStringify)
     .process(markdown);
   return result.toString();
 }
