@@ -7,13 +7,15 @@ import type { NextApiRequest, NextApiResponse } from "next";
  */
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<RevalidateResponse | InternalServerResponse | UnauthorizedResponse>
+  res: NextApiResponse<
+    RevalidateResponse | InternalServerResponse | UnauthorizedResponse
+  >
 ) {
   // Check for secret to confirm this is a valid request
   if (req.query.token !== process.env.API_KEY) {
     return res.status(401).json({
       statusCode: 401,
-      message: "Unauthorized"
+      message: "Unauthorized",
     });
   }
 
@@ -30,7 +32,10 @@ export default async function handler(
         await res.revalidate(path);
       }
     }
-    
+
+    // Revalidate home page as well
+    await res.revalidate("/");
+
     return res.status(200).json({
       statusCode: 200,
       message: "Revalidated",
