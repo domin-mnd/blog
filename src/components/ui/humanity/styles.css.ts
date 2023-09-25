@@ -3,4 +3,5 @@ import { style } from "@vanilla-extract/css";
 
 export const image: string = style({
   borderRadius: theme.borderRadius.xl,
+  width: "max-content",
 });

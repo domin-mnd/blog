@@ -10,6 +10,7 @@ export const hero: string = style({
   "@media": {
     "screen and (max-width: 900px)": {
       flexDirection: "column",
+      alignItems: "center",
     },
   },
 });
