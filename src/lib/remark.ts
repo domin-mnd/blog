@@ -15,7 +15,7 @@ import rehypeHighlight from "rehype-highlight";
 export default async function markdownToHtml(markdown: string): Promise<string> {
   const result = await unified()
     .use(remarkParse)
-    .use(require("@pondorasti/remark-img-links"), { absolutePath: "https://blog.domin.pro/cdn" }) // No types
+    .use(require("@pondorasti/remark-img-links"), { absolutePath: "https://blog.domin.lol/cdn" }) // No types
     .use(remarkGfm)
     .use(remarkRehype)
     .use(rehypeHighlight)

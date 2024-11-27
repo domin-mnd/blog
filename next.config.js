@@ -12,7 +12,7 @@ const nextConfig = {
   redirects: async () => [
     {
       source: "/me",
-      destination: "https://domin.pro/",
+      destination: "https://domin.lol/",
       basePath: false,
       permanent: true,
     },
