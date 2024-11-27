@@ -8,7 +8,7 @@ This work is a representation of what I could do with [`vanilla-extract`](https:
 
 ## Installation
 
-> **Note**: I highly suggest you checking out [this post](https://blog.domin.pro/post/my-blog-and-its-documentation) on setting up the blog due to upcoming deprecations including the correct usage of assets.
+> **Note**: I highly suggest you checking out [this post](https://blog.domin.lol/post/my-blog-and-its-documentation) on setting up the blog due to upcoming deprecations including the correct usage of assets.
 
 To run this project locally, you need to have [Node.js](https://nodejs.org/en/) installed on your machine:
 
@@ -49,7 +49,7 @@ Highly inspired by [Katerina Limpitsouni website](https://ninalimpi.com). Illust
 
 ## Documentation
 
-All the available documentation regarding the creation & maintainability of the project is stated in JSDocs and [this post](https://blog.domin.pro/post/my-blog-and-its-documentation).
+All the available documentation regarding the creation & maintainability of the project is stated in JSDocs and [this post](https://blog.domin.lol/post/my-blog-and-its-documentation).
 
 ## Contributing
 
